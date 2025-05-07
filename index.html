@@ -11,7 +11,6 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            /*background: linear-gradient(135deg, #193B67, #076EAE); /* Fondo degradado */
             background: url('https://jduget.github.io/Ingevec-Inmob/Fondo%20Github.png') no-repeat center center fixed;
             background-size: cover;
         }
@@ -19,7 +18,7 @@
             background-color: #34495e;
             display: flex;
             justify-content: center;
-            padding: 10px;
+            padding: 20px 10px; /* Aumentado de 10px a 20px */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -35,6 +34,10 @@
         }
         section {
             padding: 0;
+        }
+        /* 👇 Agregado: margen superior solo al primer reporte */
+        #proyectos {
+            margin-top: 10px;
         }
         .embed-container {
             position: relative;
