@@ -5,11 +5,10 @@
   <title>Reporte Power BI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tipografía moderna -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Fondo animado como en el index */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -27,11 +26,33 @@
 
     h2 {
       text-align: center;
-      margin: 40px 20px 20px;
+      margin: 40px 20px 10px;
       font-size: 28px;
       color: #ffffff;
       font-weight: 600;
       animation: fadeIn 1s ease-in-out;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 10px auto 30px;
+      padding: 12px 20px;
+      background-color: #0082CA;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid #0055aa;
+      width: fit-content;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .back-button:hover {
+      background-color: #0055aa;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .embed-container {
@@ -54,7 +75,6 @@
       border: none;
     }
 
-    /* Animaciones suaves */
     @keyframes slideUp {
       from {
         opacity: 0;
@@ -77,11 +97,10 @@
       }
     }
 
-    /* Adaptación a pantallas pequeñas */
     @media (max-width: 768px) {
       h2 {
         font-size: 22px;
-        margin: 30px 15px 15px;
+        margin: 30px 15px 10px;
       }
 
       .embed-container {
@@ -94,6 +113,9 @@
 <body>
 
   <h2>Reporte Power BI</h2>
+
+  
+  <a href="index.html" class="back-button">Volver al Menú Principal</a>
 
   <div class="embed-container">
     <iframe 
