@@ -2,17 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Menú</title> <!-- ✅ Corrección aquí -->
+  <title>Menú</title>
   <style>
     body {
       background-color: #111;
       font-family: Arial, sans-serif;
       color: white;
       display: flex;
+      flex-direction: column; 
       justify-content: center;
-      align-items: center; 
+      align-items: center;
       height: 100vh;
       margin: 0;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px; /* Separación entre logo y menú */
+    }
+
+    .logo {
+      max-width: 150px;
+      height: auto;
     }
 
     .menu-container {
@@ -58,29 +69,21 @@
     .menu-button:hover {
       background-color: #0055aa;
     }
-
-    .logo-container {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .logo {
-      max-width: 100%;
-      height: auto;
-    }
   </style>
 </head>
 <body>
 
+  
+  <div class="logo-container">
+    <img src="Logo_Inmob_Ingevec.png" alt="Logo" class="logo">
+  </div>
+
   <div class="menu-container">
-    <div class="logo-container">
-      <img src="Logo_Inmob_Ingevec.png" alt="Logo" class="logo">
-    </div>
     <div class="menu-title">Menú Principal</div>
     <a href="ingevec_Total.html" class="menu-button">Ingevec Total</a>
     <a href="deuda_Spread" class="menu-button">Deuda Spread</a>
     <a href="galeria.html" class="menu-button">Galería</a>
-    <a href="nosotros.html" class="menu-button">Nosotros</a>
+    <a href="https://ingevecinmobiliaria.cl/home" class="menu-button" target="_blank">Nosotros</a>
     <a href="contacto.html" class="menu-button">Contacto</a>
   </div>
 
