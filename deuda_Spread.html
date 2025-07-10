@@ -1,93 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Power BI Embeds</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        html {
-            scroll-padding-top: 80px;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('https://jduget.github.io/Ingevec-Inmob/Fondo%20Github.png') no-repeat center center fixed;
-            background-size: cover;
-        }
-        nav {
-            background-color: #34495e;
-            display: flex;
-            justify-content: center;
-            padding: 20px 10px; /* Aumentado de 10px a 20px */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 0;
-        }
-        /* 👇 Agregado: margen superior solo al primer reporte */
-        #proyectos {
-            margin-top: 10px;
-        }
-        .embed-container {
-            position: relative;
-            width: 90%;
-            height: 90vh;
-            margin: 0 auto 50px;
-        }
-        iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Power BI Embeds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente Poppins para que combine con tu index -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Fondo animado coherente con index */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #18223C, #1A365D, #056DAB, #0A2E5D);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00BFFF;
+      text-decoration: underline;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .logo {
+      max-width: 140px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 0;
+    }
+
+    .embed-container {
+      position: relative;
+      width: 90%;
+      height: 90vh;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      border: 2px solid #0276B9;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .embed-container {
+        height: 80vh;
+        width: 95%;
+      }
+
+      .logo {
+        max-width: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#proyectos">Informe Proyectos</a>
-        <a href="#secundario">Informe Secundario</a>
-        <a href="#deuda">Deuda / Spread</a>
-    </nav>
+  <!-- Logo como en index -->
+  <div class="logo-container">
+    <img src="Logo_Inmob_Ingevec.png" alt="Logo" class="logo">
+  </div>
 
-    <section id="proyectos">
-        <div class="embed-container">
-            <iframe 
-                src="https://app.powerbi.com/reportEmbed?reportId=74dfabe1-3704-49ce-8647-e675871e5c18&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
-                allowFullScreen="true">
-            </iframe>
-        </div>
-    </section>
+  <!-- Navegación con estilo -->
+  <nav>
+    <a href="#proyectos">Informe Proyectos</a>
+    <a href="#secundario">Informe Secundario</a>
+    <a href="#deuda">Deuda / Spread</a>
+  </nav>
 
-    <section id="secundario">
-        <div class="embed-container">
-            <iframe 
-                src="https://app.powerbi.com/reportEmbed?reportId=f2e46ee6-7401-42af-b77c-45cab6a64a3f&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
-                allowFullScreen="true">
-            </iframe>
-        </div>
-    </section>
+  <section id="proyectos">
+    <div class="embed-container">
+      <iframe 
+        src="https://app.powerbi.com/reportEmbed?reportId=74dfabe1-3704-49ce-8647-e675871e5c18&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
+        allowFullScreen="true">
+      </iframe>
+    </div>
+  </section>
 
-    <section id="deuda">
-        <div class="embed-container">
-            <iframe 
-                src="https://app.powerbi.com/reportEmbed?reportId=3766cabb-e360-4f3b-82d0-2671d74d6f63&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
-                allowFullScreen="true">
-            </iframe>
-        </div>
-    </section>
+  <section id="secundario">
+    <div class="embed-container">
+      <iframe 
+        src="https://app.powerbi.com/reportEmbed?reportId=f2e46ee6-7401-42af-b77c-45cab6a64a3f&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
+        allowFullScreen="true">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="deuda">
+    <div class="embed-container">
+      <iframe 
+        src="https://app.powerbi.com/reportEmbed?reportId=3766cabb-e360-4f3b-82d0-2671d74d6f63&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
+        allowFullScreen="true">
+      </iframe>
+    </div>
+  </section>
 
 </body>
 </html>
