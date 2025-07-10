@@ -2,31 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Menú /title>
+  <title>Menú</title> <!-- ✅ Corrección aquí -->
   <style>
     body {
-  background-color: #111;
-  font-family: Arial, sans-serif;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  height: 100vh;
-  margin: 0;
-}
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      height: 100vh;
+      margin: 0;
+    }
 
-    /* Contenedor del menú */
     .menu-container {
-  background: linear-gradient(to bottom, #18253F, #056DAB);
-  border: 2px solid #0276B9;
-  border-radius: 15px;
-  padding: 20px;
-  width: 220px;
-  animation: slideDown 1s ease-out;
-}
+      background: linear-gradient(to bottom, #18253F, #056DAB);
+      border: 2px solid #0276B9;
+      border-radius: 15px;
+      padding: 20px;
+      width: 220px;
+      animation: slideDown 1s ease-out;
+    }
 
-
-    /* Animación de entrada */
     @keyframes slideDown {
       from {
         opacity: 0;
@@ -45,7 +42,6 @@
       color: #0276B9;
     }
 
-    /* Botones del menú */
     .menu-button {
       display: block;
       background-color: #0082CA;
@@ -62,14 +58,24 @@
     .menu-button:hover {
       background-color: #0055aa;
     }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
 
   <div class="menu-container">
     <div class="logo-container">
-    <img src="Logo_Inmob_Ingevec.png" alt="Logo" class="logo">
-  </div>
+      <img src="Logo_Inmob_Ingevec.png" alt="Logo" class="logo">
+    </div>
     <div class="menu-title">Menú Principal</div>
     <a href="ingevec_Total.html" class="menu-button">Ingevec Total</a>
     <a href="deuda_Spread" class="menu-button">Deuda Spread</a>
