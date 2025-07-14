@@ -17,36 +17,9 @@
     }
 
     @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    /* Botón sin posición fija ni sticky, para que se mueva con scroll */
-    .back-button {
-      display: inline-block;
-      margin: 20px 20px 10px 20px;
-      padding: 10px 18px;
-      background-color: #0082ca;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 8px;
-      border: 1px solid #0055aa;
-      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      position: static; /* esta es la clave, para que no sea fixed */
-    }
-
-    .back-button:hover {
-      background-color: #0055aa;
-      transform: scale(1.05);
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     nav {
@@ -70,8 +43,28 @@
     }
 
     nav a:hover {
-      color: #00bfff;
+      color: #00BFFF;
       text-decoration: underline;
+    }
+
+    /* Botón que se mueve con el contenido */
+    .back-button {
+      display: inline-block;
+      margin: 30px 20px 10px;
+      padding: 10px 18px;
+      background-color: #0082CA;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid #0055aa;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .back-button:hover {
+      background-color: #0055aa;
+      transform: scale(1.05);
     }
 
     section {
@@ -86,7 +79,7 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      border: 2px solid #0276b9;
+      border: 2px solid #0276B9;
     }
 
     iframe {
@@ -112,30 +105,30 @@
       .back-button {
         padding: 8px 14px;
         font-size: 14px;
-        margin-left: 20px;
-        margin-top: 15px;
+        margin-left: 10px;
+        margin-top: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Botón menú principal: estará arriba, visible y se mueve con scroll -->
-  <a href="index.html" class="back-button">← Menú Principal</a>
-
-  <!-- Navegación sólo con los selectores -->
+  <!-- NAV STICKY EN LA PARTE SUPERIOR -->
   <nav>
     <a href="#proyectos">Informe Proyectos</a>
     <a href="#secundario">Informe Secundario</a>
     <a href="#deuda">Deuda / Spread</a>
   </nav>
 
+  <!-- BOTÓN DENTRO DEL CONTENIDO (se moverá al hacer scroll) -->
+  <a href="index.html" class="back-button">← Menú Principal</a>
+
   <section id="proyectos">
     <div class="embed-container">
       <iframe
         src="https://app.powerbi.com/reportEmbed?reportId=74dfabe1-3704-49ce-8647-e675871e5c18&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
-        allowFullScreen="true"
-      ></iframe>
+        allowFullScreen="true">
+      </iframe>
     </div>
   </section>
 
@@ -143,8 +136,8 @@
     <div class="embed-container">
       <iframe
         src="https://app.powerbi.com/reportEmbed?reportId=f2e46ee6-7401-42af-b77c-45cab6a64a3f&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
-        allowFullScreen="true"
-      ></iframe>
+        allowFullScreen="true">
+      </iframe>
     </div>
   </section>
 
@@ -152,8 +145,8 @@
     <div class="embed-container">
       <iframe
         src="https://app.powerbi.com/reportEmbed?reportId=3766cabb-e360-4f3b-82d0-2671d74d6f63&autoAuth=true&ctid=d10e59bc-d826-4bd0-b977-22f9ab36ba9c"
-        allowFullScreen="true"
-      ></iframe>
+        allowFullScreen="true">
+      </iframe>
     </div>
   </section>
 
