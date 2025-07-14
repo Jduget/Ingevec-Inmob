@@ -228,6 +228,8 @@
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
 
+  scene.position.y = -50;
+  
   const pointCount = 160;
   const radius = 100;
   const points = [];
