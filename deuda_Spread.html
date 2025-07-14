@@ -5,7 +5,6 @@
   <title>Power BI Embeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -25,12 +24,10 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Botón de volver arriba a la izquierda */
+    /* Botón de volver arriba a la izquierda - posición relativa para que se mueva con scroll */
     .back-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 999;
+      position: relative;
+      margin: 20px 0 10px 20px;
       padding: 10px 18px;
       background-color: #0082CA;
       color: white;
@@ -40,6 +37,7 @@
       border: 1px solid #0055aa;
       transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: inline-block;
     }
 
     .back-button:hover {
@@ -70,20 +68,6 @@
     nav a:hover {
       color: #00BFFF;
       text-decoration: underline;
-    }
-
-    .logo-container {
-      text-align: center;
-      margin: 30px 0 10px;
-    }
-
-    .logo {
-      max-width: 250px;
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: scale(1.05);
     }
 
     section {
@@ -120,13 +104,11 @@
         width: 95%;
       }
 
-      .logo {
-        max-width: 100px;
-      }
-
       .back-button {
         padding: 8px 14px;
         font-size: 14px;
+        margin-left: 10px;
+        margin-top: 15px;
       }
     }
   </style>
@@ -135,11 +117,6 @@
 
   <!-- 🔙 Botón de regreso -->
   <a href="index.html" class="back-button">← Menú Principal</a>
-
-  <!-- Logo como en index -->
-  <div class="logo-container">
-    <img src="https://ingevecinmobiliaria.cl/hubfs/Logo_Igevec_blanco-1.png" alt="Logo" class="logo">
-  </div>
 
   <!-- Navegación con estilo -->
   <nav>
