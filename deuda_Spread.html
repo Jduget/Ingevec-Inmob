@@ -28,10 +28,10 @@
       }
     }
 
-    /* Botón sin posición fija, se mueve con scroll */
+    /* Botón sin posición fija ni sticky, para que se mueva con scroll */
     .back-button {
       display: inline-block;
-      margin: 20px 0 10px 20px;
+      margin: 20px 20px 10px 20px;
       padding: 10px 18px;
       background-color: #0082ca;
       color: white;
@@ -41,7 +41,7 @@
       border: 1px solid #0055aa;
       transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      position: static; /* importante para que se mueva */
+      position: static; /* esta es la clave, para que no sea fixed */
     }
 
     .back-button:hover {
@@ -112,7 +112,7 @@
       .back-button {
         padding: 8px 14px;
         font-size: 14px;
-        margin-left: 10px;
+        margin-left: 20px;
         margin-top: 15px;
       }
     }
@@ -120,10 +120,10 @@
 </head>
 <body>
 
-  <!-- Botón menú principal -->
+  <!-- Botón menú principal: estará arriba, visible y se mueve con scroll -->
   <a href="index.html" class="back-button">← Menú Principal</a>
 
-  <!-- Navegación sólo con los selectores de informe -->
+  <!-- Navegación sólo con los selectores -->
   <nav>
     <a href="#proyectos">Informe Proyectos</a>
     <a href="#secundario">Informe Secundario</a>
