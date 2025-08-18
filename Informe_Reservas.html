@@ -33,10 +33,10 @@
       animation: fadeIn 1s ease-in-out;
     }
 
-    .back-button {
+    .back-button,
+    .print-button {
       position: fixed;
       top: 20px;
-      left: 20px;
       z-index: 999;
       padding: 10px 18px;
       background-color: #0082CA;
@@ -49,7 +49,17 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
-    .back-button:hover {
+    .back-button {
+      left: 20px;
+    }
+
+    .print-button {
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .back-button:hover,
+    .print-button:hover {
       background-color: #0055aa;
       transform: scale(1.05);
     }
@@ -58,7 +68,6 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 20px;
       padding: 30px;
     }
 
@@ -79,25 +88,6 @@
       width: 100%;
       height: 100%;
       border: none;
-    }
-
-    .print-button {
-      background-color: #0082CA;
-      color: white;
-      font-weight: 600;
-      border: 1px solid #0055aa;
-      border-radius: 8px;
-      padding: 12px 20px;
-      cursor: pointer;
-      height: fit-content;
-      align-self: flex-start;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .print-button:hover {
-      background-color: #0055aa;
-      transform: scale(1.05);
     }
 
     @keyframes slideUp {
@@ -138,9 +128,10 @@
         height: 80vh;
       }
 
+      .back-button,
       .print-button {
-        width: 80%;
-        margin-top: 10px;
+        padding: 8px 14px;
+        font-size: 14px;
       }
     }
   </style>
@@ -149,6 +140,9 @@
 
   <!-- 🔙 Botón de regreso -->
   <a href="MAIN_ADM.html" class="back-button">← Menú Principal</a>
+
+  <!-- 🖨️ Botón de imprimir fijo a la derecha -->
+  <button class="print-button" onclick="printPowerBI()">🖨️ Imprimir Informe</button>
 
   <h2>Informe Semanal Reservas</h2>
 
@@ -162,12 +156,9 @@
         allowFullScreen="true">
       </iframe>
     </div>
-
-    <!-- 🖨️ Botón de imprimir -->
-    <button class="print-button" onclick="printPowerBI()">🖨️ Imprimir Informe</button>
   </div>
 
-  <!-- 📄 Script básico para impresión directa del iframe -->
+  <!-- 📄 Script para imprimir directamente solo el iframe -->
   <script>
     function printPowerBI() {
       const iframe = document.getElementById('powerbi-frame');
