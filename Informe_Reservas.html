@@ -167,7 +167,7 @@
     <button class="print-button" onclick="printPowerBI()">🖨️ Imprimir Informe</button>
   </div>
 
-  <!-- 🧠 Script para imprimir con estilo -->
+  <!-- 📄 Script básico para impresión directa del iframe -->
   <script>
     function printPowerBI() {
       const iframe = document.getElementById('powerbi-frame');
@@ -178,43 +178,21 @@
       printWindow.document.write(`
         <html>
         <head>
-          <title>Informe Semanal Reservas</title>
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+          <title>Imprimir Power BI</title>
           <style>
-            body {
+            html, body {
               margin: 0;
-              font-family: 'Poppins', sans-serif;
-              background-color: #ffffff;
-              color: #222;
+              padding: 0;
+              height: 100%;
             }
-
-            .header {
-              padding: 16px;
-              text-align: center;
-              font-size: 22px;
-              font-weight: 600;
-              background-color: #0276B9;
-              color: white;
-            }
-
-            .logo {
-              max-height: 60px;
-              display: block;
-              margin: 10px auto;
-            }
-
             iframe {
               width: 100%;
-              height: calc(100vh - 100px);
+              height: 100%;
               border: none;
             }
           </style>
         </head>
         <body>
-          <div class="header">
-            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Power_BI_logo.svg" alt="Logo">
-            Informe Semanal de Reservas
-          </div>
           <iframe src="${iframeSrc}" onload="this.contentWindow.focus(); this.contentWindow.print();"></iframe>
         </body>
         </html>
